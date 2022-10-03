@@ -1,0 +1,129 @@
+.benefits {
+   padding: 118px 0 127px;
+   background: linear-gradient(180deg, #FDE6E6 0%, #FFFFFF 100%);
+
+   text-align: center;
+
+   &__heading {
+      margin-bottom: 104px;
+   }
+
+   &__title {
+      margin-bottom: 29px;
+   }
+
+   &__desc {
+      margin: 0 auto;
+      max-width: 588px;
+   }
+
+   &__wrapper {
+      margin-bottom: 125px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 60px;
+   }
+
+   &__card {
+      max-width: 266px;
+   }
+
+   &__btn {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+   }
+}
+
+.benefits-card {
+
+   &__img {
+      margin-bottom: 24px;
+   }
+
+   &__title {
+      margin-bottom: 12px;
+
+      color: $dark;
+      font-size: 22px;
+      font-weight: 400;
+   }
+
+   &__desc {
+      color: $gray;
+   }
+}
+
+.benefits__btn {
+   transition: transform .15s ease, column-gap .2s linear;
+
+   &:before {
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+      top: calc(50% - #{$tipHeight});
+      right: 0;
+      content: '';
+      border-style: solid;
+      border-width: $tipHeight 0 $tipHeight $tipWidth;
+      border-color: transparent transparent transparent #FFEDC2;
+      transition-duration: .3s;
+      transition-property: right;
+   }
+
+   &:hover {
+      transform: translateX(-5px);
+      animation-name: none;
+      column-gap: 14px;
+   }
+
+   &:hover:before {
+      right: -($tipWidth);
+   }
+}
+
+@media (max-width: 1024px) {
+   .benefits {
+      padding: 70px 0 70px;
+
+      &__heading {
+         margin-bottom: 80px;
+      }
+
+      &__wrapper {
+         margin-bottom: 80px;
+      }
+   }
+}
+
+@media (max-width: 769px) {
+   .benefits {
+      &__wrapper {
+         justify-content: space-around;
+      }
+   }
+}
+
+@media (max-width: 481px) {
+   .benefits {
+      padding: 20px 0 50px;
+
+      &__title {
+         font-size: 36px;
+      }
+
+      &__desc {
+         font-size: 16px;
+         max-width: 355px;
+      }
+
+      &__btn {
+         font-size: 14px;
+
+      }
+   }
+}

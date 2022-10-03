@@ -1,0 +1,18 @@
+// Base
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/base";
+
+//Components
+@import "./components/slick";
+@import "./components/btns";
+
+// Blocks
+@import "./components/header";
+@import "./components/community";
+@import "./components/event";
+@import "./components/benefits";
+@import "./components/reviews";
+@import "./components/series";
+@import "./components/cta";
+@import "./components/footer";
